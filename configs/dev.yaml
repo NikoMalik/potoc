@@ -1,0 +1,21 @@
+env: "dev"
+server:
+  host: ${GRPC_HOST}
+  port: ${GRPC_PORT}
+  max_streams: ${GRPC_HOST_MAX_STREAM}  # Максимальное количество потоков
+  write_buffer_size: ${GRPC_HOST_WRITE_BUFFER}  # Размер буфера записи
+  read_buffer_size: ${GRPC_HOST_READ_BUFFER}  # Размер буфера чтения
+  initial_window_size: ${GRPC_PORT_INITIAL_WINDOW}  # Начальный размер окна
+  initial_conn_window_size: ${GRPC_PORT_INITIAL_CONN_WINDOW}  # Начальный размер окна для соединения
+  max_header_list_size: ${GRPC_HOST_MAX_HEADER}  # Максимальный размер заголовка
+  max_recv_msg_size: ${GRPC_HOST_MAX_RECV_MSG}  # Максимальный размер получаемого сообщения 
+
+log_level: "debug"
+db:
+
+  host: ${DB_HOST}
+  port: ${DB_PORT}
+  user: ${DB_USER}
+  password: ${DB_PASSWORD}
+  database: ${DB_NAME}
+  sslmode: ${DB_SSLMODE}

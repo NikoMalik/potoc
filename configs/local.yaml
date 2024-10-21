@@ -1,0 +1,22 @@
+env: "local"
+
+server:
+  host: "localhost"
+  port: "50051"
+  max_streams: 100  # Максимальное количество потоков
+  write_buffer_size: 32768  # Размер буфера записи
+  read_buffer_size: 32768  # Размер буфера чтения
+  initial_window_size: 65535  # Начальный размер окна
+  initial_conn_window_size: 65535  # Начальный размер окна для соединения
+  max_header_list_size: 8192  # Максимальный размер заголовка
+  max_recv_msg_size: 4194304  # Максимальный размер получаемого сообщения 
+
+
+
+db:
+  host: "localhost"
+  port: "5432"
+  user: "postgres"
+  password: "postgres"
+  database: "postgres"
+  sslmode: "disable"

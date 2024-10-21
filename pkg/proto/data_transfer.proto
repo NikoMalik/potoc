@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+
+
+
+option go_package = "github.com/NikoMalik/potoc/pkg/proto";
+
+service DataTranfer {
+    // for get base64 from anyone and decode it to db and save 
+    rpc GetData (stream DataRequest) returns (stream DataResponse);    
+    rpc FetchData (stream DataRequest) returns (stream DataResponse);
+}
+
+
+message DataRequest {
+    //id socket 
+    string socket_id = 1;
+    bytes encoded_data = 2;
+}
+
+
+
+// message = response from server
+message DataResponse {
+    string status = 1;
+    string msg = 2;
+    bytes data = 3;
+}

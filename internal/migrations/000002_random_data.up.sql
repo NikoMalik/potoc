@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS random_data (
+    id SERIAL PRIMARY KEY, -- unique id
+    name VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    value INTEGER NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
